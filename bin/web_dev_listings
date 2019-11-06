@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require '../lib/WEB_DEV.RB'
+require './lib/WEB_DEV.RB'
 
 WEB_DEV::CLI.new.call
