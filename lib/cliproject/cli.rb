@@ -8,7 +8,7 @@ class Web_dev::CLI
 
   def list_jobs
     puts "Todays Web Dev Job Listings:"
-    @jobs = WEB_DEV::Job.today
+    @jobs = Web_dev::Job.today
     @jobs.each.with.index(1) do |job, i|
       puts "{i}. #{job.title}"
     end
