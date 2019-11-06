@@ -3,4 +3,4 @@
 require "bundler/setup"
 require './lib/web_dev'
 
-WEB_DEV::CLI.new.call
+web_dev::CLI.new.call
