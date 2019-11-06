@@ -1,4 +1,4 @@
-class WEB_DEV::CLI
+class Web_dev::CLI
 
   def call
     list_jobs
