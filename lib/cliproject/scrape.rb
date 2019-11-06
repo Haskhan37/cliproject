@@ -1,30 +1,23 @@
-class Web_dev::Job
-  attr_accessor :title
+class Scrape
 
   def self.today
     #scrape craiglist for jobs then return posted listings
-    self.scrape_jobs
+    self.scrape_craigslist
   end
 
-  def self.scrape_jobs
-    jobs = []
 
-    jobs << self.scrape_craigslist
-
-    jobs
-  end
 
   def self.scrape_craigslist
-    doc = Nokogiri::HTML(open('https://newyork.craiglist.org/search/ggg?query=developer&is_paid=all'))
+    doc = Nokogiri::HTML(open('https://newyork.craigslist.org/search/ggg?query=developer&is_paid=all'))
 
-
-    job = self.new
-    job.links = doc.css('.content').css('a').css('.hdrlnk')
+    links = doc.css('.content').css('a').css('.hdrlnk')
     links.each do |lnk|
-      puts lnk.inner_html
-      
-      job
-  end
-end
-end
 
+    job = Job.new
+    job.title = lnk.text
+    job.url = lnk.attribute('href').value
+
+  end
+  binding.pry
+end
+end
