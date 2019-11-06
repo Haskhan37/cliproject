@@ -22,7 +22,5 @@ class Web_dev::Job
     job.links = doc.css('.content').css('a').css('.hdrlnk')
     links.each do |lnk|
       puts lnk.inner_html
-
-      job
 end
 end
