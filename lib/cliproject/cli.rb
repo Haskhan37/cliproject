@@ -1,6 +1,7 @@
-class Web_dev::CLI
+class CLI
 
   def call
+    Scrape.today
     list_jobs
     menu
     goodbye
@@ -8,8 +9,8 @@ class Web_dev::CLI
 
   def list_jobs
     puts "Todays Web Dev Job Listings:"
-    @jobs = Web_dev::Job.today
-    @jobs.each.with.index(1) do |job, i|
+
+    Job.jobs.each.with.index(1) do |job, i|
       puts "{i}. #{job.title}"
     end
   end
@@ -21,9 +22,9 @@ class Web_dev::CLI
       input = gets.strip.downcase
 
       if input.to_i > 0
-        the_job = @jobs[input.to_i-1]
+        the_job = Job.jobs[input.to_i-1]
         puts "#{the_job.tite}"
-      elseif input == "list"
+      elsif input == "list"
       list_jobs
     else
       puts "Unsure of your selection, type list or exit"
@@ -34,4 +35,4 @@ end
   def goodbye
   puts "Check back tomorrow for more job listings"
 end
-end 
+end
