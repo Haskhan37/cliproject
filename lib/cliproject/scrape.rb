@@ -1,4 +1,4 @@
-class WEB_DEV::Job
+class Web_dev::Job
   attr_accessor :title,
 
   def self.today
