@@ -1,5 +1,5 @@
 class Web_dev::Job
-  attr_accessor :title,
+  attr_accessor :title
 
   def self.today
     #scrape craiglist for jobs then return posted listings
