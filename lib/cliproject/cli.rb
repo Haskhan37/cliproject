@@ -10,7 +10,7 @@ class WEB_DEV::CLI
     puts "Todays Web Dev Job Listings:"
     @jobs = WEB_DEV::Job.today
     @jobs.each.with.index(1) do |job, i|
-      puts "{i}. #{job.title} - #{job.date} - #{job.location}"
+      puts "{i}. #{job.title}"
     end
   end
 
@@ -22,7 +22,7 @@ class WEB_DEV::CLI
 
       if input.to_i > 0
         the_job = @jobs[input.to_i-1]
-        puts "#{the_job.tite} - #{the_job.date} - #{the_job.location}"
+        puts "#{the_job.tite}"
       elseif input == "list"
       list_jobs
     else
