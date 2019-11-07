@@ -11,7 +11,7 @@ class CLI
     puts "Todays Web Dev Job Listings:"
 
     Job.jobs.each.with.index(1) do |job, i|
-      puts "{i}. #{job.title}"
+      puts "{i}. #{job.title} - #{job.url}"
     end
   end
 
@@ -23,7 +23,7 @@ class CLI
 
       if input.to_i > 0
         the_job = Job.jobs[input.to_i-1]
-        puts "#{the_job.tite}"
+        puts "#{the_job.tite} - #{the_job.url}"
       elsif input == "list"
       list_jobs
     else
