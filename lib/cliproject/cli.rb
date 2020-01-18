@@ -10,7 +10,7 @@ class CLI
   def list_jobs
     puts "Todays Web Dev Job Listings:"
 
-    Job.jobs.each.with.index(1) do |job, i|
+    Job.jobs.each.with_index(1) do |job, i|
       puts "{i}. #{job.title} - #{job.url}"
     end
   end
