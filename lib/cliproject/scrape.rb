@@ -13,11 +13,11 @@ class Scrape
     links = doc.css('.content').css('a').css('.hdrlnk')
     links.each do |lnk|
 
+
     job = Job.new
     job.title = lnk.text
     job.url = lnk.attribute('href').value
 
-  end
-  binding.pry
+end
 end
 end
