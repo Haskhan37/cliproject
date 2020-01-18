@@ -4,3 +4,5 @@ require "bundler/setup"
 require './lib/web_dev'
 
 CLI.new.call
+
+#env
