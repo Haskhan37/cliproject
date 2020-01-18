@@ -1,5 +1,5 @@
 class Job
-  attr_accessor :title
+  attr_accessor :title, :url
 
   @@jobs = []
 
