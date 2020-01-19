@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+TODO: WELCOME! Here you will find a CLI gem that uses Craigslist provide the user with job listings for software engineer positions. Upon starting up the gem you will need to Bundle Install several things to get it running but afterwards everything will run smoothly and you'll be on your way!
 
 ## Development
 
